@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php  
 include("../../bd.php"); 
 
@@ -63,5 +64,10 @@ include("../../templates/header.php");
 
 
 
+=======
+<?php  include("../../templates/header.php");  ?>
+
+Listar usuarios
+>>>>>>> e2db0b1 (17/12/23 6:00pm)
 
 <?php  include("../../templates/footer.php");  ?>

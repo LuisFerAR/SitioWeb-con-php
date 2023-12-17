@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php $url_base="http://localhost/WebSite/admin//"; ?>
+=======
+<?php $url_base="http://localhost/ejercicios/website/admin/"; ?>
+>>>>>>> e2db0b1 (17/12/23 6:00pm)
 
 <!doctype html>
 <html lang="en">
@@ -24,7 +28,11 @@
             <nav class="navbar navbar-expand navbar-light bg-light">
                 <div class="nav navbar-nav">
                     <a class="nav-item nav-link active" href="#" aria-current="page"> Administrador <span class="visually-hidden">(current)</span></a>
+<<<<<<< HEAD
                     <a class="nav-item nav-link active" href="<?php echo $url_base;?>secciones/servicios/">Servicios</a>
+=======
+                    <a class="nav-item nav-link" href="<?php echo $url_base;?>secciones/servicios/">Servicios</a>
+>>>>>>> e2db0b1 (17/12/23 6:00pm)
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>secciones/portafolio/">Portafolio</a>
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>secciones/entradas">Entradas</a>
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>secciones/equipo">Equipo</a>

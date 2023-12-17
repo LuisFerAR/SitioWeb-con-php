@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
 include("../../bd.php"); 
 //BORRANDO REGISTROS CON EL ID
@@ -71,5 +72,10 @@ include("../../templates/header.php");  ?>
   
 </div>
 
+=======
+<?php  include("../../templates/header.php");  ?>
+
+Listar entrada
+>>>>>>> e2db0b1 (17/12/23 6:00pm)
 
 <?php  include("../../templates/footer.php");  ?>

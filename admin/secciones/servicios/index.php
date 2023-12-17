@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php  
 include("../../bd.php");
 
@@ -18,6 +19,11 @@ if(isset($_GET['txtID'])){
   //print_r($lista_servicios); PARA SABERS SI ESTAN LLEGANDO LOS VALORES
 
 include("../../templates/header.php");  ?>
+=======
+<?php  include("../../templates/header.php");  ?>
+
+Listar servicios
+>>>>>>> e2db0b1 (17/12/23 6:00pm)
 
 <div class="card">
     <div class="card-header">
@@ -36,6 +42,7 @@ include("../../templates/header.php");  ?>
                     </tr>
                 </thead>
                 <tbody>
+<<<<<<< HEAD
                     <?php foreach($lista_servicios as $registros){ ?>
                     <tr class="">
                         <td><?php echo $registros['ID'];?></td> <!-- EL NOMBRE DEL ARRAY DEBE SER EL MIMSO QUE DE LA BASE DE DATOS-->
@@ -48,6 +55,22 @@ include("../../templates/header.php");  ?>
                         </td>
                     </tr>
                     <?php } ?>
+=======
+                    <tr class="">
+                        <td>1</td>
+                        <td>fa-book</td>
+                        <td>tutorias</td>
+                        <td>servicios de tutoria para programacion</td>
+                        <td>Editar|Eliminar</td>
+                    </tr>
+                    <tr class="">
+                        <td>1</td>
+                        <td>fa-book</td>
+                        <td>tutorias</td>
+                        <td>servicios de tutoria para programacion</td>
+                        <td>Editar|Eliminar</td>
+                    </tr>
+>>>>>>> e2db0b1 (17/12/23 6:00pm)
                 </tbody>
             </table>
         </div>

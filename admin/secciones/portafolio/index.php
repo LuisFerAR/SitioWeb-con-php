@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php include("../../bd.php"); 
 
 if(isset($_GET['txtID'])){
@@ -79,5 +80,10 @@ include("../../templates/header.php");
     </div>
 </div>
 
+=======
+<?php  include("../../templates/header.php");  ?>
+
+Listar portafolio
+>>>>>>> e2db0b1 (17/12/23 6:00pm)
 
 <?php  include("../../templates/footer.php");  ?>

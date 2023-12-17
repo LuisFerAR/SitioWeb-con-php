@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
     include("../../bd.php");
     if($_POST){
@@ -71,5 +72,10 @@
     <div class="card-footer text-muted"></div>
 </div>
 
+=======
+<?php  include("../../templates/header.php");  ?>
+
+Crear servicios
+>>>>>>> e2db0b1 (17/12/23 6:00pm)
 
 <?php  include("../../templates/footer.php");  ?>

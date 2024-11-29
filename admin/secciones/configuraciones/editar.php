@@ -35,10 +35,9 @@
         $sentencia->execute();
         $registro_imagen=$sentencia->fetch(PDO::FETCH_LAZY);
 
-        $sentencia=$conexion->prepare("UPDATE tbl_entradas  WHERE id=:id");
+        $sentencia=$conexion->prepare("UPDATE tbl_configuraciones  WHERE id=:id");
         $sentencia->bindParam(":id",$txtID);
         $sentencia->execute();
-        $imagen=$nombre_archivo_imagen;
     
         }
 

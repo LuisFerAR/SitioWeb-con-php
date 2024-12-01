@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5f7a79f (mensaje para llamar)
 <?php 
 include("../../bd.php"); 
 
@@ -41,12 +44,18 @@ include("../../templates/header.php");
 
 
 <div class="card"  style="background-color: #E5E5E0">
+<<<<<<< HEAD
     <div class="card-header"> 
         Equipo
     </div>
     <div class="card-body">
         <form action="" method="post" enctype="multipart/form-data">
             
+=======
+    <div class="card-header">Equipo </div>
+    <div class="card-body">
+        <form action="" method="post" enctype="multipart/form-data">
+>>>>>>> 5f7a79f (mensaje para llamar)
             <div class="mb-3">
                 <label for="imagen" class="form-label">Imagen:</label>
                 <input type="file" class="form-control" name="imagen" id="imagen" aria-describedby="helpId" placeholder=""/>
@@ -77,11 +86,15 @@ include("../../templates/header.php");
     </div>
     <div class="card-footer text-muted"></div>
 </div>
+<<<<<<< HEAD
 
 =======
 <?php  include("../../templates/header.php");  ?>
 
 Crear equipo
 >>>>>>> e2db0b1 (17/12/23 6:00pm)
+=======
+
+>>>>>>> 5f7a79f (mensaje para llamar)
 
 <?php  include("../../templates/footer.php");  ?>

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5f7a79f (mensaje para llamar)
 <?php  
 include("../../bd.php"); 
 
@@ -63,11 +66,15 @@ include("../../templates/header.php");
 
 
 
+<<<<<<< HEAD
 
 =======
 <?php  include("../../templates/header.php");  ?>
 
 Listar usuarios
 >>>>>>> e2db0b1 (17/12/23 6:00pm)
+=======
+
+>>>>>>> 5f7a79f (mensaje para llamar)
 
 <?php  include("../../templates/footer.php");  ?>

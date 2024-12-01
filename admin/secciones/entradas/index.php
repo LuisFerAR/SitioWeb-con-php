@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5f7a79f (mensaje para llamar)
 <?php 
 include("../../bd.php"); 
 //BORRANDO REGISTROS CON EL ID
@@ -71,11 +74,15 @@ include("../../templates/header.php");  ?>
     <div class="card-footer text muted" ></div>
   
 </div>
+<<<<<<< HEAD
 
 =======
 <?php  include("../../templates/header.php");  ?>
 
 Listar entrada
 >>>>>>> e2db0b1 (17/12/23 6:00pm)
+=======
+
+>>>>>>> 5f7a79f (mensaje para llamar)
 
 <?php  include("../../templates/footer.php");  ?>

@@ -17,11 +17,9 @@
         $sentencia->bindParam(":nombreconfiguracion", $nombreconfiguracion);  
         $sentencia->bindParam(":valor", $valor);
         $sentencia->execute();
-<<<<<<< HEAD
-=======
+<
         $mensaje="Registro agregado con exito.";
         header("Location:index.php?mensaje=".$mensaje);
->>>>>>> 5f7a79f (mensaje para llamar)
     
     }
 
@@ -52,15 +50,8 @@ include("../../templates/header.php");
     <div class="card-footer text-muted"></div>
 </div>
 
-<<<<<<< HEAD
 
-=======
+
 <?php  include("../../templates/header.php");  ?>
-
-Crear configuracion
->>>>>>> e2db0b1 (17/12/23 6:00pm)
-=======
-
->>>>>>> 5f7a79f (mensaje para llamar)
 
 <?php  include("../../templates/footer.php");  ?>

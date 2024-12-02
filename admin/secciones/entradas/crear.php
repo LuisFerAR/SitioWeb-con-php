@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5f7a79f (mensaje para llamar)
+
 <?php  
 include("../../bd.php"); 
 
@@ -28,11 +25,9 @@ include("../../bd.php");
         $sentencia->bindParam(":descripcion",$descripcion);
         $sentencia->bindParam(":imagen",$nombre_archivo_imagen);
         $sentencia->execute();
-<<<<<<< HEAD
-=======
         $mensaje="Registro agregado con exito.";
         header("Location:index.php?mensaje=".$mensaje);
->>>>>>> 5f7a79f (mensaje para llamar)
+
     }
 
 include("../../templates/header.php");
@@ -67,15 +62,6 @@ include("../../templates/header.php");
     </div>
     <div class="card-footer text-muted"></div>
 </div>
-<<<<<<< HEAD
-
-=======
 <?php  include("../../templates/header.php");  ?>
-
-Crear entrada
->>>>>>> e2db0b1 (17/12/23 6:00pm)
-=======
-
->>>>>>> 5f7a79f (mensaje para llamar)
 
 <?php  include("../../templates/footer.php");  ?>

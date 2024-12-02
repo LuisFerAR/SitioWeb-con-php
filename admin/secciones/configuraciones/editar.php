@@ -48,14 +48,9 @@
   
     ?>
 
-    <?php  include("../../templates/footer.php");  ?>
-=======
-<?php  include("../../templates/header.php");  ?>
-=======
-<?php 
->>>>>>> 5f7a79f (mensaje para llamar)
-
-include("../../bd.php");
+    <?php include("../../templates/footer.php");  ?>
+    <?php include("../../templates/header.php");  ?>
+    <?php include("../../bd.php");
 
 
     if(isset($_GET['txtID'])){
@@ -120,10 +115,7 @@ include("../../bd.php");
     <div class="card-footer text-muted"></div>
 </div>
 
-    <?=  include("../../templates/footer.php");  ?>
+ <?=  include("../../templates/footer.php");  ?>
 
-<<<<<<< HEAD
 <?php  include("../../templates/footer.php");  ?>
->>>>>>> e2db0b1 (17/12/23 6:00pm)
-=======
->>>>>>> 5f7a79f (mensaje para llamar)
+

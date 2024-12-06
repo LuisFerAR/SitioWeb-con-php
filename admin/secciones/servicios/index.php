@@ -1,16 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<?php  
-include("../../bd.php");
+
+<?php include("../../bd.php");
 
 if(isset($_GET['txtID'])){
+
     //borrar dicho registro con el ID correspondiente
-  
     $txtID= ( isset($_GET['txtID']) )?$_GET['txtID']:""; //RECEPCIONAR EL ID
     $sentencia=$conexion->prepare("DELETE FROM tbl_servicios WHERE id=:id");
     $sentencia->bindParam(":id",$txtID);
     $sentencia->execute();
-
 }
 
   //seleccionar registros
@@ -20,33 +17,6 @@ if(isset($_GET['txtID'])){
   //print_r($lista_servicios); PARA SABERS SI ESTAN LLEGANDO LOS VALORES
 
 include("../../templates/header.php");  ?>
-=======
-<?php  include("../../templates/header.php");  ?>
-
-Listar servicios
->>>>>>> e2db0b1 (17/12/23 6:00pm)
-=======
-<?php  
-include("../../bd.php");
-
-if(isset($_GET['txtID'])){
-    //borrar dicho registro con el ID correspondiente
-  
-    $txtID= ( isset($_GET['txtID']) )?$_GET['txtID']:""; //RECEPCIONAR EL ID
-    $sentencia=$conexion->prepare("DELETE FROM tbl_servicios WHERE id=:id");
-    $sentencia->bindParam(":id",$txtID);
-    $sentencia->execute();
-
-}
-
-  //seleccionar registros
-  $sentencia=$conexion->prepare("SELECT * FROM `tbl_servicios`");
-  $sentencia->execute();
-  $lista_servicios=$sentencia->fetchAll(PDO::FETCH_ASSOC);
-  //print_r($lista_servicios); PARA SABERS SI ESTAN LLEGANDO LOS VALORES
-
-include("../../templates/header.php");  ?>
->>>>>>> 5f7a79f (mensaje para llamar)
 
 <div class="card">
     <div class="card-header">
@@ -65,8 +35,7 @@ include("../../templates/header.php");  ?>
                     </tr>
                 </thead>
                 <tbody>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                     <?php foreach($lista_servicios as $registros){ ?>
                     <tr class="">
                         <td><?php echo $registros['ID'];?></td> <!-- EL NOMBRE DEL ARRAY DEBE SER EL MIMSO QUE DE LA BASE DE DATOS-->
@@ -79,10 +48,8 @@ include("../../templates/header.php");  ?>
                         </td>
                     </tr>
                     <?php } ?>
-=======
-=======
                     <?php foreach($lista_servicios as $registros){ ?>
->>>>>>> 5f7a79f (mensaje para llamar)
+
                     <tr class="">
                         <td><?php echo $registros['ID'];?></td> <!-- EL NOMBRE DEL ARRAY DEBE SER EL MIMSO QUE DE LA BASE DE DATOS-->
                         <td><?php echo $registros['icono'];?></td>
@@ -93,17 +60,13 @@ include("../../templates/header.php");  ?>
                           <a name="eliminar" id="eliminar" class="btn btn-danger" href="index.php?txtID=<?php echo $registros['ID'];?>" role="button">Eliminar</a>
                         </td>
                     </tr>
-<<<<<<< HEAD
->>>>>>> e2db0b1 (17/12/23 6:00pm)
-=======
                     <?php } ?>
->>>>>>> 5f7a79f (mensaje para llamar)
+
                 </tbody>
             </table>
         </div>
     </div>
     <div class="card-footer text-muted"></div>
 </div>
-
 
 <?php  include("../../templates/footer.php");  ?>

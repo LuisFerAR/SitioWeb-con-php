@@ -2,19 +2,6 @@
 <?php  
 include("../../bd.php"); 
 
-if(isset($_GET['txtID'])){
-    //borrar dicho registro con el ID correspondiente
-    $txtID= ( isset($_GET['txtID']) )?$_GET['txtID']:""; //RECEPCIONAR EL ID
-
-    $sentencia=$conexion->prepare("SELECT * FROM tbl_configuraciones WHERE id=:id");
-    $sentencia->bindParam(":id",$txtID);
-    $sentencia->execute();
-
-
-    $sentencia=$conexion->prepare("DELETE FROM tbl_configuraciones WHERE id=:id");
-    $sentencia->bindParam(":id",$txtID);
-    $sentencia->execute();
-}
 
 //SELECCIONAR REGISTROS
 $sentencia=$conexion->prepare("SELECT * FROM `tbl_configuraciones`");
@@ -46,7 +33,6 @@ include("../../templates/header.php");  ?>
                         <td><?php echo $registros['valor'] ?></td>
                         <td>
                             <a name="editar" id="editar" class="btn btn-info" href="editar.php?txtID=<?php echo $registros['ID'];?>" role="button">Editar</a>
-                            <a name="eliminar" id="eliminar" class="btn btn-danger" href="index.php?txtID=<?php echo $registros['ID'];?>" role="button">Eliminar</a>      
                         </td>
                     </tr>
                     <?php } ?>
@@ -56,9 +42,5 @@ include("../../templates/header.php");  ?>
         </div>
     <div class="card-footer text-muted"></div>
 </div>
-
-<?php  include("../../templates/header.php");  ?>
-
-
 
 <?php  include("../../templates/footer.php");  ?>

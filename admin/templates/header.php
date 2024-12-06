@@ -1,12 +1,6 @@
 
 <?php $url_base="http://localhost/WebSite/admin//"; ?>
 
-<?php $url_base="http://localhost/ejercicios/website/admin/"; ?>
-
-
-<?php $url_base="http://localhost/WebSite/admin//"; ?>
-
-
 <!doctype html>
 <html lang="en">
     <head>
@@ -32,12 +26,7 @@
                 <div class="nav navbar-nav">
                     <a class="nav-item nav-link active" href="#" aria-current="page"> Administrador <span class="visually-hidden">(current)</span></a>
 
-                    <a class="nav-item nav-link active" href="<?php echo $url_base;?>secciones/servicios/">Servicios</a>
-
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>secciones/servicios/">Servicios</a>
-
-                    <a class="nav-item nav-link active" href="<?php echo $url_base;?>secciones/servicios/">Servicios</a>
-
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>secciones/portafolio/">Portafolio</a>
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>secciones/entradas">Entradas</a>
                     <a class="nav-item nav-link" href="<?php echo $url_base;?>secciones/equipo">Equipo</a>
@@ -47,7 +36,6 @@
                 </div>
             </nav>
             
-
         </header>
         <main class="container" >
             <br>

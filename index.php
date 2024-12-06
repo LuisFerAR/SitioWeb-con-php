@@ -21,6 +21,11 @@
      $sentencia->execute();
      $lista_equipo=$sentencia->fetchAll(PDO::FETCH_ASSOC);
 
+      //seleccionar configuraciones
+      $sentencia=$conexion->prepare("SELECT * FROM `tbl_configuraciones`");
+      $sentencia->execute();
+      $lista_configuraciones=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -64,17 +69,22 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Welcome To Our Studio!</div>
-                <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+                <div class="masthead-subheading"><?php echo $lista_configuraciones[0]['valor']; ?>
+            </div>
+                <div class="masthead-heading text-uppercase"><?php echo $lista_configuraciones[1]['valor']; ?>
+            </div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="<?php echo $lista_configuraciones[3]['valor']; ?>">
+                    <?php echo $lista_configuraciones[2]['valor']; ?></a>
             </div>
         </header>
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Servicios</h2>
-                    <h3 class="section-subheading text-muted">Los servicios que generamos.</h3>
+                    <h2 class="section-heading text-uppercase">
+                        <?php echo $lista_configuraciones[4]['valor']; ?></h2>
+                    <h3 class="section-subheading text-muted">
+                        <?php echo $lista_configuraciones[5]['valor']; ?></h3>
                 </div>
 
                 <div class="row text-center">
@@ -95,8 +105,10 @@
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Portafolio</h2>
-                    <h3 class="section-subheading text-muted">Imagenes con descripcion incluida, hacer click para mayor informacion</h3>
+                    <h2 class="section-heading text-uppercase">
+                        <?php echo $lista_configuraciones[6]['valor']; ?></h2>
+                    <h3 class="section-subheading text-muted">
+                        <?php echo $lista_configuraciones[7]['valor']; ?></h3>
                 </div>
                 <div class="row">
                 <?php foreach($lista_portafolio as $registros){ ?>
@@ -162,8 +174,8 @@
         <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Entradas/About</h2>
-                    <h3 class="section-subheading text-muted">Las entradas que tenemos</h3>
+                    <h2 class="section-heading text-uppercase"><?php echo $lista_configuraciones[8]['valor']; ?></h2>
+                    <h3 class="section-subheading text-muted"><?php echo $lista_configuraciones[9]['valor']; ?></h3>
                 </div>
                 <ul class="timeline">
                 <?php 
@@ -186,11 +198,7 @@
                     <li class="timeline-inverted">
                         <div class="timeline-image">
                             <h4>
-                               FIN 
-                                <br />
-                                DEL
-                                <br />
-                                CAMINO!
+                            <?php echo $lista_configuraciones[10]['valor']; ?>
                             </h4>
                         </div>
                     </li>
@@ -201,8 +209,8 @@
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Equipo Poderoso</h2>
-                    <h3 class="section-subheading text-muted">Equipo dinamita</h3>
+                    <h2 class="section-heading text-uppercase"><?php echo $lista_configuraciones[11]['valor']; ?></h2>
+                    <h3 class="section-subheading text-muted"><?php echo $lista_configuraciones[12]['valor']; ?></h3>
                 </div>
                 <div class="row">
                 <?php foreach($lista_equipo as $registros){ ?>
@@ -217,38 +225,16 @@
                         </div>
                     </div>
                   <?php  }?>
-                   
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Nuestro equipo de jovenes con mucha actitud</p></div>
                 </div>
             </div>
         </section>
-        <!-- Clients-->
-        <div class="py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." aria-label="Microsoft Logo" /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." aria-label="Google Logo" /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." aria-label="Facebook Logo" /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." aria-label="IBM Logo" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+      
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase"><?php echo $lista_configuraciones[13]['valor']; ?></h2>
+                    <h3 class="section-subheading text-muted"><?php echo $lista_configuraciones[14]['valor']; ?></h3>
                 </div>
                 <!-- * * * * * * * * * * * * * * *-->
                 <!-- * * SB Forms Contact Form * *-->
@@ -311,15 +297,11 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2024</div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                        <a class="btn btn-dark btn-social mx-2" href="<?php echo $lista_configuraciones[15]['valor']; ?>" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="<?php echo $lista_configuraciones[16]['valor']; ?>" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="<?php echo $lista_configuraciones[17]['valor']; ?>" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>

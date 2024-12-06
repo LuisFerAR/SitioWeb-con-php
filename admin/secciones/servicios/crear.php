@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5f7a79f (mensaje para llamar)
+
 <?php 
     include("../../bd.php");
     if($_POST){
@@ -26,7 +23,6 @@
     }
 ?>
 
-<<<<<<< HEAD
 <?php  include("../../templates/header.php");  ?>
 
 <div class="card">
@@ -79,11 +75,6 @@
 =======
 <?php  include("../../templates/header.php");  ?>
 
-Crear servicios
->>>>>>> e2db0b1 (17/12/23 6:00pm)
-=======
-<?php  include("../../templates/header.php");  ?>
-
 <div class="card">
     <div class="card-header">Crear servicios</div>
     <div class="card-body">
@@ -130,7 +121,5 @@ Crear servicios
     </div>
     <div class="card-footer text-muted"></div>
 </div>
-
->>>>>>> 5f7a79f (mensaje para llamar)
 
 <?php  include("../../templates/footer.php");  ?>

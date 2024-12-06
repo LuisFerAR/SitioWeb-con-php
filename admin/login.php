@@ -42,13 +42,7 @@
                                         <label for="" class="form-label">Contraseña</label>
                                         <input type="text" class="form-control" name="contrasenia" id="contrasenia"aria-describedby="helpId" placeholder=""/>
                                     </div>
-                                    <a name=""
-                                        id=""
-                                        class="btn btn-primary"
-                                        href="index.php"
-                                        role="button"
-                                        >Entrar
-                                    </a>
+                                    
                                 </form>
                             </div>
                             <div class="card-footer text-muted"></div>

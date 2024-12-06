@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5f7a79f (mensaje para llamar)
-<?php  
-include("../../bd.php"); 
+<?php include("../../bd.php"); 
 
     if(isset($_GET['txtID'])){
         //borrar dicho registro con el ID correspondiente
@@ -39,7 +34,7 @@ include("../../templates/header.php");
                     <tr>
                         <th scope="col">ID </th>
                         <th scope="col">Usuario</th>
-                        <th scope="col">Password</th>
+                        <th scope="col">Contraseña</th>
                         <th scope="col">Correo</th>
                         <th scope="col">Acciones</th>
                     </tr>
@@ -63,18 +58,5 @@ include("../../templates/header.php");
         </div>
     <div class="card-footer text-muted"></div>
 </div>
-
-
-
-<<<<<<< HEAD
-
-=======
-<?php  include("../../templates/header.php");  ?>
-
-Listar usuarios
->>>>>>> e2db0b1 (17/12/23 6:00pm)
-=======
-
->>>>>>> 5f7a79f (mensaje para llamar)
 
 <?php  include("../../templates/footer.php");  ?>

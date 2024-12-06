@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5f7a79f (mensaje para llamar)
-    <?php  
 
-    include("../../bd.php"); 
+    <?php include("../../bd.php"); 
 
     if($_POST){
 
@@ -17,7 +12,6 @@
         $sentencia->bindParam(":nombreconfiguracion", $nombreconfiguracion);  
         $sentencia->bindParam(":valor", $valor);
         $sentencia->execute();
-<
         $mensaje="Registro agregado con exito.";
         header("Location:index.php?mensaje=".$mensaje);
     
@@ -49,9 +43,5 @@ include("../../templates/header.php");
     </div>
     <div class="card-footer text-muted"></div>
 </div>
-
-
-
-<?php  include("../../templates/header.php");  ?>
 
 <?php  include("../../templates/footer.php");  ?>

@@ -1,4 +1,32 @@
-<?php include("./bd.php"); ?>
+<?php 
+session_start();
+
+if($_POST){
+    include("./bd.php");
+
+    $usuario=(isset($_POST['usuario']))?$_POST['usuario']:"";
+    $contrasenia=(isset($_POST['contrasenia']))?$_POST['contrasenia']:"";
+
+     //SELECCIONAR REGISTROS
+     $sentencia=$conexion->prepare("SELECT *, count(*) as n_usuarios FROM `tbl_usuarios` WHERE usuario=:usuario 
+                                    AND contrasenia=:contrasenia ");
+    $sentencia->bindParam(":usuario", $usuario);  
+    $sentencia->bindParam(":contrasenia", $contrasenia);
+    $sentencia->execute();
+
+
+    $lista_usuarios=$sentencia->fetch(PDO::FETCH_LAZY);
+
+   if($lista_usuarios['n_usuarios']>0){
+    $_SESSION['usuario']=$lista_usuarios['usuario'];
+    $_SESSION['logueado']=true;
+    header("Location:index.php");
+    exit();
+   }else{
+        $mensaje="Error: El usuario o la contraseña son incorrectos";
+   }
+}
+?>
 
 <!doctype html>
 <html lang="en">
@@ -30,9 +58,31 @@
                     <div class="col-4">
                     </div>
                     <div class="col-4">
+                        <br><br><br><br>
+                            <?php if(isset($mensaje)){ ?>
+                            <div class="alert alert-danger alert-dismissible fade show"
+                                role="alert">
+                                        <button
+                                            type="button"
+                                            class="btn-close"
+                                            data-bs-dismiss="alert"
+                                            aria-label="Close">
+                                        </button>
+                                        <strong><?php echo $mensaje;?></strong> Alert Content
+                            </div>
+                            <?php } ?>
                         <div class="card">
                             <div class="card-header">Login</div>
                             <div class="card-body">
+                              
+                                
+                                <script>
+                                    var alertList = document.querySelectorAll(".alert");
+                                    alertList.forEach(function (alert) {
+                                        new bootstrap.Alert(alert);
+                                    });
+                                </script>
+                                
                                 <form action="" method="post">
                                     <div class="mb-3">
                                         <label for="" class="form-label">Usuario</label>
@@ -42,7 +92,7 @@
                                         <label for="" class="form-label">Contraseña</label>
                                         <input type="text" class="form-control" name="contrasenia" id="contrasenia"aria-describedby="helpId" placeholder=""/>
                                     </div>
-                                    
+                                    <input name="" id="" class="btn btn-primary" type="submit"  value="Entrar" />
                                 </form>
                             </div>
                             <div class="card-footer text-muted"></div>

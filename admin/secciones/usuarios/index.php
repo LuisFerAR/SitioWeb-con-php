@@ -44,7 +44,7 @@ include("../../templates/header.php");
                     <tr class="">
                         <td><?php echo $registros['ID'] ?></td>
                         <td><?php echo $registros['usuario'] ?></td>
-                        <td><?php echo $registros['password'] ?></td>
+                        <td><?php echo $registros['contrasenia'] ?></td>
                         <td><?php echo $registros['correo'] ?></td>
                         <td>
                             <a name="editar" id="editar" class="btn btn-info" href="editar.php?txtID=<?php echo $registros['ID'];?>" role="button">Editar</a>

@@ -14,5 +14,13 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+
+        <script>
+            $(document).ready( function () {
+                $('table').DataTable({
+                    "pageLength" :3
+                });
+            });
+        </script>
     </body>
 </html>

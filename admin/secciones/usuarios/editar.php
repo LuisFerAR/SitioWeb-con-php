@@ -16,7 +16,7 @@ if(isset($_GET['txtID'])){
         //recepcionamos los valores del formulario
         $txtID = (isset($_GET['txtID']))?$_GET['txtID']:"";
         $usuario=(isset($_POST['usuario']))?$_POST['usuario']:"";
-        $password=(isset($_POST['contrasenia']))?$_POST['contrasenia']:"";
+        $contrasenia=(isset($_POST['contrasenia']))?$_POST['contrasenia']:"";
         $correo=(isset($_POST['correo']))?$_POST['correo']:"";
        
   
@@ -59,7 +59,7 @@ include("../../templates/header.php");
 
                 <div class="mb-3">
                     <label for="contrasenia" class="form-label">Contraseña:</label>
-                    <input type="contrasenia" class="form-control" value="<?php echo $contrasenia ?>" name=contrasenia"" id="contrasenia" aria-describedby="helpId" placeholder=""/>
+                    <input type="text" class="form-control" value="<?php echo $contrasenia ?>" name="contrasenia" id="contrasenia" aria-describedby="helpId" placeholder=""/>
                 </div>
 
                 <div class="mb-3">

@@ -64,7 +64,7 @@ include("../../templates/header.php");
                         </td>
                         <td scope="col"><?php echo $registros['descripcion'];?></td>
                         <td scope="col">
-                            <?php echo $registros['cliente'];?>
+                            <?php echo $registros['cliente'];?> 
                             <br>
                             <?php echo $registros['categoria'];?>
                         </td>

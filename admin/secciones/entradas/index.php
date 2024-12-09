@@ -55,9 +55,7 @@ include("../../templates/header.php");  ?>
                         <td><?php echo $registros['fecha'];?></td>
                         <td><?php echo $registros['titulo'];?></td>
                         <td><?php echo $registros['descripcion'];?></td>
-                        <td> 
-                            <img width="100px" src="../../../assets/img/about/<?php echo $registros['imagen'];?>">
-                        </td>
+                        <td><img width="100px" src="../../../assets/img/about/<?php echo $registros['imagen'];?>"></td>
                         <td>
                             <a name="editar" id="editar" class="btn btn-info" href="editar.php?txtID=<?php echo $registros['ID'];?>" role="button">Editar</a>
                             <a name="eliminar" id="eliminar" class="btn btn-danger" href="index.php?txtID=<?php echo $registros['ID'];?>" role="button">Eliminar</a>      

@@ -48,20 +48,6 @@ include("../../templates/header.php");  ?>
                         </td>
                     </tr>
                     <?php } ?>
-                    <?php foreach($lista_servicios as $registros){ ?>
-
-                    <tr class="">
-                        <td><?php echo $registros['ID'];?></td> <!-- EL NOMBRE DEL ARRAY DEBE SER EL MIMSO QUE DE LA BASE DE DATOS-->
-                        <td><?php echo $registros['icono'];?></td>
-                        <td><?php echo $registros['titulo'];?></td>
-                        <td><?php echo $registros['descripcion'];?></td>
-                        <td>
-                          <a name="editar" id="editar" class="btn btn-info" href="editar.php?txtID=<?php echo $registros['ID'];?>" role="button">Editar</a>
-                          <a name="eliminar" id="eliminar" class="btn btn-danger" href="index.php?txtID=<?php echo $registros['ID'];?>" role="button">Eliminar</a>
-                        </td>
-                    </tr>
-                    <?php } ?>
-
                 </tbody>
             </table>
         </div>

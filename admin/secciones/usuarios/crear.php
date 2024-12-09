@@ -30,7 +30,7 @@ include("../../templates/header.php");
 
                 <div class="mb-3">
                     <label for="contrasenia" class="form-label">Contraseña:</label>
-                    <input type="contrasenia" class="form-control" name=contrasenia"" id="contrasenia" aria-describedby="helpId" placeholder=""/>
+                    <input type="text" class="form-control" name="contrasenia" id="contrasenia" aria-describedby="helpId" placeholder=""/>
                 </div>
 
                 <div class="mb-3">

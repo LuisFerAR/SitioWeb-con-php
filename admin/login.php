@@ -68,7 +68,7 @@ if($_POST){
                                             data-bs-dismiss="alert"
                                             aria-label="Close">
                                         </button>
-                                        <strong><?php echo $mensaje;?></strong> Alert Content
+                                        <strong><?php echo $mensaje;?></strong>
                             </div>
                             <?php } ?>
                         <div class="card">

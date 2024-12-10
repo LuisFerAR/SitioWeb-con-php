@@ -32,9 +32,9 @@ if($_POST){
     $sentencia->bindParam(":categoria",$categoria);
     $sentencia->bindParam(":url",$url);
     $sentencia->execute();
-    
     $mensaje="Registro agregado con exito.";
     header("Location:index.php?mensaje=".$mensaje);
+    
 }
 
 

@@ -43,12 +43,12 @@ if($_POST){
         <form action="" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label  for="txtID" class="form-label">ID:</label>
-                <input   type="text" class="form-control" value="<?php echo $txtID?>" name="txtID"
+                <input  type="text" class="form-control" readonly value="<?php echo $txtID?>" name="txtID"
                  id="txtID" aria-describedby="helpId" placeholder=""/>
             </div>
             <div class="mb-3">
                 <label for="nombreconfiguracion" class="form-label">Nombre de la configuracion:</label>
-                <input  type="text" class="form-control" value="<?php echo $nombreconfiguracion?>" 
+                <input type="text" class="form-control" readonly value="<?php echo $nombreconfiguracion?>" 
                 name="nombreconfiguracion" id="nombreconfiguracion" aria-describedby="helpId" placeholder=""/>
             </div>
             <div class="mb-3">
